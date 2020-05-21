@@ -7,4 +7,4 @@ Hi! My name is Suzie Breikers. I am student Communication & MultiMedia Design at
 
 
 
-[Link](url) and ![Image](GitHub_Logo.png)
+[Link](url) and ![GitHub_Logo.png]()
