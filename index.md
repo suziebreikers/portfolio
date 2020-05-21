@@ -8,5 +8,5 @@ Hi! My name is Suzie Breikers. I am student Communication & MultiMedia Design at
 
 
 
-
+<img src="GitHub_Logo.png" width="100">
 ![](GitHub_Logo.png)
