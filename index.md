@@ -5,6 +5,3 @@ Hi! My name is Suzie Breikers. I am student Communication & MultiMedia Design at
 ### My work:
 
 
-
-
-[Link](url) and ![GitHub_Logo.png]()
