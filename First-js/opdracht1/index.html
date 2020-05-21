@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet">
+<title>Page Title</title>
+</head>
+
+<body>
+    <header id="nav-header">
+<nav>
+        <ul>
+            <li>
+                <a href="#">link 1</a>
+                <a href="#" id="tekst">Comic Sans</a>
+                <a href="#" id="beep">Beep</a>
+                <a href="#">link 4</a>
+            </li>
+        </ul>
+</nav>        
+    </header>
+<main>
+<header id="textheader">
+<h1>My First JavaScript Site</h1>
+
+
+<a id="header-prev" class="header-ui" href="#"></a>
+<a id="header-next" class="header-ui" href="#"></a>
+</header>
+
+<article>
+  <a href="#" id="cta">CTA</a>
+
+<p>My money's in that office, right? If she start giving me some <del class="beep">bullshit</del> about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that <del class="beep">bitch</del> in the kneecaps, find out where my <del class="beep">goddamn</del> money is. She gonna tell me too. Hey, look at me when I'm talking to you, <del class="beep">motherfucker</del>.</p>
+
+<div id="sphynx"> <a class="demo-trigger" href="https://upload.wikimedia.org/wikipedia/commons/2/29/Cat_Sphynx._Kittens._img_11.jpg">
+  <img src="img/sphynx1@2x.jpg"></a>
+
+</div>
+
+<div class="sphynx2">
+</div>
+
+<a id="accoBtn" class="accoBtn" href="#"><p>Aan</p></a>
+
+<div id="accordion">
+    <h3>Section 1</h3>
+    <div>
+      <p>
+      Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+      ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+      amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+      odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+      </p>
+    </div>
+    <h3>Section 2</h3>
+    <div>
+      <p>
+      Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+      purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+      velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+      suscipit faucibus urna.
+      </p>
+    </div>
+    <h3>Section 3</h3>
+    <div>
+      <p>
+      Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+      Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+      ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+      lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+      </p>
+      <ul>
+        <li>List item one</li>
+        <li>List item two</li>
+        <li>List item three</li>
+      </ul>
+    </div>
+    <h3>Section 4</h3>
+    <div>
+      <p>
+      Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+      et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+      faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+      mauris vel est.
+      </p>
+      <p>
+      Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+      inceptos himenaeos.
+      </p>
+    </div>
+  </div>
+
+<footer class="clear">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed sem ultrices, facilisis sem vitae, accumsan neque. Aliquam pharetra lacus eu odio faucibus suscipit. Nullam tortor diam, cursus non neque nec, feugiat mattis odio. Mauris eu quam tincidunt, vestibulum sem maximus, fringilla diam. Donec luctus erat lorem, sed rhoncus nulla tincidunt eu. Donec non justo urna. Sed eleifend nisl eu lacus mattis, eu vestibulum sem ornare. Suspendisse dictum neque id dignissim suscipit. Etiam et ligula eu nibh dignissim hendrerit.</p>
+
+</footer>
+
+</article>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/Luminous.min.js"></script>
+
+<script>
+
+//backstretch
+$('#textheader').backstretch([
+  "img/bloemen.jpg",
+  "img/bloemen2.jpg",
+  "img/bloemen3.jpg"
+], { duration: 3000, fade: 750});
+
+$('#header-next').click(function(){
+  $('header').backstretch("next");
+});
+
+$('#header-prev').click(function(){
+  $('header').backstretch("prev");
+});
+
+//accordion knop
+$('#accoBtn').ready(function() {
+   
+   $('#accoBtn').click(function(){
+    // als class aanwezig is     
+      if ( $(this).hasClass('active') ) {
+         // verwijder de class
+         $(this).removeClass('active');
+         $( "#accordion" ).accordion( "disable" );
+         console.log('accordion uit');
+         $('#accoBtn').css({
+       'background': 'coral'
+     })
+     
+   } else { // anders
+     // voeg de class toe
+     $(this).addClass('active'); 
+     $( "#accordion" ).accordion( "enable" );
+         console.log('accordion aan'); 
+     $('#accoBtn').css({
+       'background': 'lightgreen'
+     })
+   }
+
+  });
+  
+});
+
+//accordion 
+
+$(function() { // voer functie uit zodra DOM klaar is
+    $( "#accordion" ).accordion();// de accordion functie van jQuery UI
+});
+
+$("#accordion").ready(function() {
+    $( "#accordion" ).accordion({ animate: 1000, heightStyle: "content" });
+});
+
+    //1.selector
+    //2. functie
+    //3. opties
+
+    let titleColor = $('h1').css('color');
+
+    $('#cta').click(function(){
+
+    $('#cta').css({
+        'color': 'coral', 
+        'font-size': '4em', 
+        'margin-left': '300px'
+    });
+
+ });
+
+ $('#tekst').click(function(){
+     $('p').css({
+         'font-family': 'Comic Sans MS'
+     });
+     $('h1').css({
+         'font-family': 'Comic Sans MS'
+     });
+     $('a').css({
+         'font-family': 'Comic Sans MS'
+     });
+    });
+
+$('#beep').click(function(){
+    $('.beep').css({
+         'color': 'red'
+    });
+});
+
+ //plugin luminous
+  
+  var demoTrigger = document.querySelector('.demo-trigger');
+  
+  new Drift(demoTrigger, {
+    paneContainer: document.querySelector('.detail'),
+    inlinePane: 900,
+    inlineOffsetY: -85,
+    containInline: true,
+    sourceAttribute: 'href'
+  });
+  
+  new Luminous(demoTrigger);
+</script>
+ 
+</body>
+
+</html>

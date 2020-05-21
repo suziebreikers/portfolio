@@ -1,0 +1,153 @@
+/*reset sheet */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/*main */
+main{
+    max-width: 984px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+header {
+    background-color: lavender;
+    margin-bottom: 20px;
+    height: 200px;
+}
+.header-ui{
+    position: absolute;
+    background: lightblue;
+    width: 40px;
+    height: 40px;
+    display: block;
+    top:0;
+    transform: translateY(170%);
+}
+
+#header-prev{
+    left:5%;
+}
+
+#header-next{
+    right: 5%;
+}
+
+footer{
+    background-color: thistle;
+}
+
+.clear{
+    clear: both;
+}
+
+/*typo */
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 4em;
+    color: palevioletred;
+    margin-bottom: 0.5em;
+}
+
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    margin-bottom: 1em;
+}
+
+#cta{
+    display: inline-block;
+    background: thistle;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    transition:1000ms ease all;
+}
+
+/*header nav*/
+#nav-header{
+    background-color: thistle;
+    height: 50px; 
+    width: 100%;
+    top:0;
+    left:0;
+    position: fixed;
+}
+
+nav ul li{
+   padding: 20px;
+  
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* plaatje katten*/
+div {
+ display: block;
+ width: 300px;
+ height: 300px;
+ margin: 50px;
+ float: left;
+}
+
+img{
+    max-width: 100%;
+    height: 100%;
+}
+
+.sphynx2{
+  background-image: url(../img/sphynx2@2x.jpg);
+  background-size: cover;
+}
+
+.demo-trigger {
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+    cursor: zoom-in;
+}
+
+/*accordion*/
+.accoBtn{
+background: lightblue;
+width: 100px;
+height: 40px;
+display: inline-block;
+transform: translateY(80%);
+text-align: center;
+margin-left: 100px;
+}
+
+#accordion {
+    margin-bottom: 200px;
+}
+.ui-accordion-header{
+    color: grey;
+}
+
+.ui-accordion-header-active{
+    color: black;;
+}
+
+
+/* media queries*/
+@media all and (max-width: 900px) and (min-width: 100px) {
+    body{
+    background-color: lightgray;
+    }
+}
+@media all and (max-width: 800px) and (min-width: 100px) {
+    div{
+     width: 200px;
+     height: 200px;
+     margin: 20px;
+    }
+}
+@media all and (max-width: 720px) and (min-width: 100px) {
+    div{
+    width: 100%;
+    }
+}
+
